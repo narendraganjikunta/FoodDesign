@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+padding: 100px;
+width: 150px;
+margin: 50px 500px;
+border-radius: 20px;
+background-color: rgba(128, 128, 128, 0.269);
+}
+a{
+    text-decoration: none;
+}
+#mailerror{
+    display: none;
+    color: red;
+}
+#passerror{
+    display: none;
+    color: red;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <h3>
+                <label for="email">Email:<span style="color:red">*</span></label>
+                <input type="email" name="email" id="email1" placeholder="enter your email">
+                <span id="mailerror">please enter your mail </span>
+                <label for="password">password:<span style="color:red ;">*</span></label>
+                <input type="password" name="password" id="password1" placeholder="enter your password">
+                <span id="passerror">please enter your password </span>
+                <input type="button" name="login" id="login" value="login">
+            </h3>
+        </form>
+        <span>forget password</span> <a href="#">Click Here</a>
+        <span>Don't have an account</span> <a href="#"> Click Here</a> <button><a href="./main.html">Back To Home</a></button>
+    </div>
+    <script>
+        document.getElementById("login").addEventListener("click", function () {
+            let email, password
+            email = document.getElementById("email1").value;
+            password = document.getElementById("password1").value
+            if (email.length == 0) {
+                document.getElementById("mailerror").style.display = "block";
+            }
+            else {
+                document.getElementById("mailerror").style.display = "none";
+            }
+            if (password.length == 0) {
+                document.getElementById("passerror").style.display = "block";
+            }
+            else {
+                document.getElementById("passerror").style.display = "none";
+            }
+        });
+        </script>
+</body>
+</html>
